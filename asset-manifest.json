@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/opeaceLandingpage/static/css/main.abd64e84.css",
+    "main.js": "/opeaceLandingpage/static/js/main.4e55cb89.js",
+    "index.html": "/opeaceLandingpage/index.html",
+    "main.abd64e84.css.map": "/opeaceLandingpage/static/css/main.abd64e84.css.map",
+    "main.4e55cb89.js.map": "/opeaceLandingpage/static/js/main.4e55cb89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.4e55cb89.js"
+  ]
+}
