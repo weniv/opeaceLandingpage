@@ -25,9 +25,11 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: 16px;
+    font-family: 'NanumSquareNeo-Variable';
   }
 
   button {
     border: none;
+    cursor: pointer;
   }
 `;

@@ -1,6 +1,10 @@
 export { default as Header } from "./Header";
-export { default as SectionOne } from "./SectionOne";
-export { default as SectionTwo } from "./SectionTwo";
-export { default as SectionThree } from "./SectionThree";
-export { default as SectionFour } from "./SectionFour";
-export { default as SectionFive } from "./SectionFive";
+export { default as Layout } from "./Layout";
+export { default as Banner } from "./Banner";
+export { default as Overview } from "./Overview";
+export { default as Schedule } from "./Schedule";
+export { default as Notification } from "./Notification";
+export { default as Facility } from "./Facility";
+export { default as QnA } from "./QnA";
+export { default as CompanyIntro } from "./CompanyIntro";
+export { default as Footer } from "./Footer";
