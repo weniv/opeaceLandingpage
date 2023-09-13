@@ -21,15 +21,21 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    font-family: 'NanumSquareNeo-Variable';
   }
 
   body {
     font-size: 16px;
     font-family: 'NanumSquareNeo-Variable';
+
   }
 
   button {
     border: none;
     cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;

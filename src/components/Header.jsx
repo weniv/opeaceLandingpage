@@ -28,15 +28,15 @@ const Wrap = styled.header`
   }
 
   button {
-    width: 120px;
-    height: 40px;
+    width: 7.5rem;
+    height: 2.5rem;
     border-radius: 30px;
     background-color: var(--main-color);
 
     a {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: bold;
-      text-decoration: none;
+      color: var(--dark-color);
     }
   }
 `;

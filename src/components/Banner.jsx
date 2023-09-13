@@ -24,12 +24,17 @@ const Btn = styled.button`
   background-color: var(--main-color);
 
   p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.75rem;
     font-weight: bold;
 
     &::after {
       content: url(${process.env.PUBLIC_URL}/img/go.svg);
-      max-width: 1.688rem;
+      display: block;
+      width: 1.688rem;
+      height: 1.813rem;
       margin-left: 9px;
     }
   }

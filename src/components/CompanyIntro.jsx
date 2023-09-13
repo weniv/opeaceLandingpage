@@ -94,7 +94,6 @@ const Grid = styled.div`
         font-size: 14px;
         font-weight: 500;
         color: var(--light-color);
-        text-decoration: none;
         cursor: pointer;
       }
     }
@@ -121,7 +120,6 @@ const Apply = styled.div`
       font-size: 0.875rem;
       font-weight: 500;
       color: var(--light-color);
-      text-decoration: none;
       cursor: pointer;
     }
   }
