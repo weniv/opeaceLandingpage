@@ -50,7 +50,7 @@ export default function WenivIntro() {
 
 const Char = styled.figure`
   img {
-    width: ${({ isMobile }) => (isMobile ? '23.43rem' : '49.125rem')};
+    width: ${({ isMobile }) => (isMobile ? '100%' : '49.125rem')};
     margin-top: ${({ isMobile }) => (isMobile ? '20px' : '36px')};
   }
 
