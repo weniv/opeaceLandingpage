@@ -12,20 +12,28 @@ export default function Tutor() {
         <TutorWrap>
           {TutorList.map((cls) => (
             <Card key={cls.id}>
-              <h3>{cls.title}</h3>
-              <div className="tutorInfo">
-                <img src={process.env.PUBLIC_URL + '/img/test.png'} alt="강사 소개 이미지" />
-                <div>
-                  <p className="tutorName">
-                    강사 <strong>{cls.name}</strong>
-                  </p>
-                  <div className="tutorCareer">
-                    {cls.career.map((el) => (
-                      <p key={el.id}>
-                        {el.current === 1 ? <span className="current">現</span> : <span className="former">前</span>}
-                        {el.position}
-                      </p>
-                    ))}
+              <div className="wrap">
+                <h3>{cls.title}</h3>
+                <div className="tutorInfo">
+                  <img src={process.env.PUBLIC_URL + '/img/test.png'} alt="강사 소개 이미지" />
+                  <div>
+                    <p className="tutorName">
+                      강사 <strong>{cls.name}</strong>
+                    </p>
+                    <div className="tutorCareer">
+                      {cls.career.map((el) => (
+                        <div className="careerWrap">
+                          <p key={el.id}>
+                            {el.current === 1 ? (
+                              <span className="current">現</span>
+                            ) : (
+                              <span className="former">前</span>
+                            )}
+                          </p>
+                          <p>{el.position}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -51,38 +59,44 @@ const TutorWrap = styled.div`
 `;
 
 const Card = styled.div`
-  width: 30rem;
-  height: 15rem;
+  width: 30em;
+  height: 15em;
   display: flex;
-  flex-direction: column;
-  gap: 33px;
+  align-items: center;
   justify-content: center;
   background-color: var(--light-color);
-  padding: 34px 20px 42px 20px;
+
+  div.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.06em;
+    width: 90%;
+  }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: bold;
+    align-self: flex-start;
   }
 
   div.tutorInfo {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 1.5em;
 
     img {
-      width: 102px;
+      width: 6.38em;
       border-radius: 50%;
     }
 
     p.tutorName {
-      font-size: 0.875rem;
-      padding-bottom: 12px;
+      font-size: 0.875em;
+      padding-bottom: 0.75em;
       border-bottom: 2px solid var(--bg-color);
-      margin-bottom: 12px;
+      margin-bottom: 0.75em;
 
       strong {
-        font-size: 1.25rem;
+        font-size: 1.25em;
         font-weight: bold;
       }
     }
@@ -90,22 +104,24 @@ const Card = styled.div`
     div.tutorCareer {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.63em;
 
-      p {
-        font-size: 0.75rem;
-        color: #717171;
+      div.careerWrap {
+        display: flex;
+        gap: 0.69em;
 
-        span {
-          margin-right: 11px;
-        }
+        p {
+          font-size: 0.75em;
+          color: #717171;
+          line-height: 1.5em;
 
-        span.current {
-          color: var(--main-color);
-        }
+          span.current {
+            color: var(--main-color);
+          }
 
-        span.former {
-          color: var(--dark-color);
+          span.former {
+            color: var(--dark-color);
+          }
         }
       }
     }

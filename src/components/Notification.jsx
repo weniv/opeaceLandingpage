@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Title, SubTitle } from "./atom/index";
-import Layout from "./Layout";
+import React from 'react';
+import styled from 'styled-components';
+import { Title, SubTitle } from './atom/index';
+import Layout from './Layout';
 
 export default function Notification() {
   return (
@@ -12,11 +12,12 @@ export default function Notification() {
         <br />
         동시에 경험하며 업무 능력 향상과 전문 지식을 함께 얻어보세요.
       </SubTitle>
-      <Img src={process.env.PUBLIC_URL + "/img/s4-info.svg"} />
+      <Img src={process.env.PUBLIC_URL + '/img/s4-info.svg'} />
     </Layout>
   );
 }
 
 const Img = styled.img`
+  width: 100%;
   padding-top: 52px;
 `;

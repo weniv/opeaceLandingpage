@@ -12,12 +12,10 @@ import {
   CompanyIntro,
   Footer,
 } from '../components/index';
-import { AutoSlider } from '../components/atom';
 
 export default function Main() {
   return (
     <Layout>
-      {/* <AutoSlider /> */}
       <Header />
       <Banner />
       <Overview />
@@ -35,4 +33,8 @@ export default function Main() {
 const Layout = styled.section`
   max-width: 1194px;
   margin: 0 auto;
+
+  @media (max-width: 1194px) {
+    max-width: 100%;
+  }
 `;

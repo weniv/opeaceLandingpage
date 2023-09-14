@@ -28,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: 'NanumSquareNeo-Variable';
 
+    @media (max-width: 1194px) {
+      font-size: 12px;
+    }
   }
 
   button {

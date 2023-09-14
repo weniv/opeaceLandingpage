@@ -99,6 +99,7 @@ const Archive = styled.div`
   }
 
   img.bg {
+    width: 100%;
     opacity: 0.2;
   }
 `;
