@@ -46,6 +46,10 @@ const Wrap = styled.div`
   display: flex;
   gap: 1.88rem;
   margin: 36px 0 100px 0;
+
+  @media (max-width: 1194px) {
+    padding: 0 20px;
+  }
 `;
 
 const Grid = styled.div`
@@ -68,11 +72,11 @@ const Grid = styled.div`
   div.description {
     display: flex;
     flex-direction: column;
-    padding: 49px 0 49px 30px;
+    padding: 3.06em 1.88em;
     background-color: #f5f5f5;
 
     strong {
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: bold;
       white-space: pre-wrap;
       margin-bottom: 17px;
