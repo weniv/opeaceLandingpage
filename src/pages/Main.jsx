@@ -12,8 +12,11 @@ import {
   CompanyIntro,
   Footer,
 } from '../components/index';
+import { useResizeContext } from '../context/ResizeContext';
 
 export default function Main() {
+  const { isMobile } = useResizeContext();
+
   return (
     <Layout>
       <Header />
@@ -21,7 +24,7 @@ export default function Main() {
       <Overview />
       <Schedule />
       <WenivIntro />
-      <Tutor />
+      {!isMobile && <Tutor />}
       <Notification />
       <Facility />
       <CompanyIntro />
@@ -33,4 +36,9 @@ export default function Main() {
 const Layout = styled.section`
   max-width: 1194px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 375px) {
+    min-width: 375px;
+    overflow: hidden;
+  }
 `;
