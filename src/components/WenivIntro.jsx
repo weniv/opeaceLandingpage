@@ -68,17 +68,21 @@ const Archive = styled.div`
     z-index: 999;
     align-items: center;
     justify-content: space-between;
-    padding: ${({ isMobile }) => (isMobile ? '34px 0' : '0 102px')};
+    padding: ${({ isMobile }) => (isMobile ? '34px 0' : '0 6.38em')};
 
     img {
-      width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30rem')};
+      width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30em')};
+      padding: 0 6.38em;
+      align-items: center;
+      justify-content: center;
+      gap: 8.38em;
     }
 
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: ${({ isMobile }) => (isMobile ? '20px' : '36px')};
+      gap: ${({ isMobile }) => (isMobile ? '20px' : '2.25em')};
       flex-shrink: 0;
 
       p {
@@ -90,8 +94,8 @@ const Archive = styled.div`
       }
 
       button {
-        width: ${({ isMobile }) => (isMobile ? '145px' : '220px')};
-        height: 40px;
+        width: ${({ isMobile }) => (isMobile ? '145px' : '13.75em')};
+        height: 2.5em;
         background-color: var(--dark-color);
         color: var(--light-color);
         border-radius: 37px;

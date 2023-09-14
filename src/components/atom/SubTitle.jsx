@@ -7,6 +7,6 @@ export default function SubTitle({ children, isMobile }) {
 
 const Text = styled.p`
   font-size: ${({ isMobile }) => (isMobile ? '0.75rem' : '1rem')};
-  line-height: 27px;
+  line-height: 1.69em;
   text-align: center;
 `;

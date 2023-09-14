@@ -35,8 +35,8 @@ const Img = styled.img`
 
 const Description = styled.p`
   text-align: center;
-  font-size: 1rem;
-  line-height: 1.688rem;
+  font-size: 1em;
+  line-height: 1.688em;
 
   span {
     font-weight: bold;
@@ -47,29 +47,29 @@ const Description = styled.p`
 const Plan = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.63em;
 
   div {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
   }
 
   span {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 104px;
-    height: 30px;
+    width: 6.5em;
+    height: 1.88em;
     border-radius: 24px;
     color: var(--light-color);
     background-color: var(--dark-color);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   p {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1em;
   }
 `;

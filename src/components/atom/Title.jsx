@@ -7,7 +7,6 @@ export default function Title({ children, isMobile }) {
 
 const Text = styled.h2`
   font-size: ${({ isMobile }) => (isMobile ? '1.25rem' : '1.688rem')};
-  font-weight: bold;
   margin-bottom: ${({ isMobile }) => (isMobile ? '12px' : '17px')};
   text-align: center;
 `;

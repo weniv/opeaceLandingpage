@@ -46,7 +46,7 @@ const Grid = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 1.88em;
     background-color: var(--light-color);
     order: ${({ id }) => (id === 2 ? 1 : 0)};
   }
