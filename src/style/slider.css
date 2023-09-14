@@ -1,0 +1,19 @@
+.slick-dots {
+  display: flex !important;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+}
+
+.slick-dots li {
+  width: 175px;
+  height: 107px;
+  margin: 0;
+}
+
+.slick-track {
+  height: 444px;
+}
+
+.slick-arrow {
+  display: none !important;
+}

@@ -121,5 +121,12 @@ export const TutorList = [
   },
 ];
 
+export const placeImgList = [
+  { id: 1, img: 'place-1', name: 'place' },
+  { id: 2, img: 'place-2', name: 'place' },
+  { id: 3, img: 'place-3', name: 'place' },
+  { id: 4, img: 'place-4', name: 'place' },
+];
+
 export const googleFormLink =
   'https://docs.google.com/forms/d/e/1FAIpQLSdXsz3PW4bfbdlvUiELRplAAbXh-RaNb0mJJsE3CowMKZD-mg/viewform';
