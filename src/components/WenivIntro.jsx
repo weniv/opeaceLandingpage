@@ -43,7 +43,6 @@ export default function WenivIntro() {
             </button>
           </div>
         </div>
-        <img className="bg" src={process.env.PUBLIC_URL + '/img/archive-bg.svg'} />
       </Archive>
     </Layout>
   );
@@ -124,8 +123,18 @@ const Archive = styled.div`
     }
   }
 
-  img.bg {
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
     opacity: 0.2;
+    background-image: url(${process.env.PUBLIC_URL + '/img/archive-bg.svg'});
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
   }
 `;
