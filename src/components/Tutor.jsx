@@ -46,12 +46,17 @@ export default function Tutor() {
 }
 
 const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: var(--bg-color);
-  padding: 100px 6.75rem;
+  padding: 100px 0;
 `;
 
 const TutorWrap = styled.div`
+  width: 61.5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5em;
