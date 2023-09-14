@@ -40,12 +40,11 @@ const Layout = styled.section`
   flex-direction: column;
   position: relative;
   max-width: 1194px;
-
   margin: 0 auto;
+  overflow: hidden;
 
   @media only screen and (max-width: 375px) {
     min-width: 375px;
-    overflow: hidden;
   }
 
   @media (max-width: 1194px) {
