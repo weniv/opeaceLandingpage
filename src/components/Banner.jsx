@@ -46,7 +46,7 @@ const Btn = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     font-weight: bold;
 
     a {

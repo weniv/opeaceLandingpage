@@ -54,7 +54,7 @@ const Wrap = styled.div`
 const TutorWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 1.5em;
   margin-top: 42px;
 `;
 

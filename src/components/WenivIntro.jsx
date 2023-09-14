@@ -62,30 +62,31 @@ const Archive = styled.div`
     height: 100%;
     background-color: rgba(2, 255, 153, 0.6);
     z-index: 999;
-    padding: 0 102px;
+    padding: 0 6.38em;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8.38em;
 
     img {
-      width: 30rem;
+      width: 30em;
     }
 
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
+      gap: 2.25em;
 
       p {
         text-align: center;
-        font-size: 1.625rem;
+        font-size: 1.625em;
         font-weight: bold;
         line-height: 2.25rem;
       }
 
       button {
-        width: 220px;
-        height: 40px;
+        width: 13.75em;
+        height: 2.5em;
         background-color: var(--dark-color);
         color: var(--light-color);
         border-radius: 37px;
@@ -93,7 +94,7 @@ const Archive = styled.div`
 
       a {
         color: var(--light-color);
-        font-size: 0.938rem;
+        font-size: 0.938em;
       }
     }
   }
