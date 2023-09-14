@@ -72,7 +72,6 @@ const Archive = styled.div`
 
     img {
       width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30em')};
-      padding: 0 6.38em;
       align-items: center;
       justify-content: center;
       gap: 8.38em;
