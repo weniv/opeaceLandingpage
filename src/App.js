@@ -1,7 +1,6 @@
-import "./App.css";
-import { ResizeProvider } from "./context/ResizeContext";
-import Main from "./pages/Main";
-import { GlobalStyle } from "./style/GlobalStyle";
+import { ResizeProvider } from './context/ResizeContext';
+import Main from './pages/Main';
+import { GlobalStyle } from './style/GlobalStyle';
 
 function App() {
   return (
