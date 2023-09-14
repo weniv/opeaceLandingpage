@@ -46,6 +46,7 @@ const Layout = styled.section`
   @media only screen and (max-width: 375px) {
     min-width: 375px;
     overflow: hidden;
+  }
 
   @media (max-width: 1194px) {
     max-width: 100%;

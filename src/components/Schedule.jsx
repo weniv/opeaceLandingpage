@@ -10,8 +10,8 @@ export default function Schedule() {
   const { isMobile } = useResizeContext();
   return (
     <Layout>
-      <Title>제주 온보딩 워케이션 일정</Title>
-      <SubTitle>3박 4일간 진행됩니다.</SubTitle>
+      <Title isMobile={isMobile}>제주 온보딩 워케이션 일정</Title>
+      <SubTitle isMobile={isMobile}>3박 4일간 진행됩니다.</SubTitle>
       {!isMobile && <Table src={process.env.PUBLIC_URL + '/img/s3-table.svg'}></Table>}
       {isMobile && (
         <>
@@ -27,14 +27,6 @@ export default function Schedule() {
 
 const Table = styled.img`
   width: 61.88em;
-  margin-top: 1.65em;
-`;
-
-const Message = styled.p`
-  color: #acacac;
-  font-size: 10px;
-  font-weight: 400;
-  margin: 20px 0 11px;
 `;
 
 const Message = styled.p`
