@@ -80,6 +80,7 @@ const Archive = styled.div`
     padding: ${({ isMobile }) => (isMobile ? '34px 0' : '0 6.38em')};
     justify-content: center;
     gap: 11%;
+    gap: ${({ isMobile }) => (isMobile ? 0 : '11%')};
 
     img {
       width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30em')};
