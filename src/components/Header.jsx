@@ -60,7 +60,6 @@ const MobileWrap = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px;
 
     img {
       width: calc(100% - 10px);
