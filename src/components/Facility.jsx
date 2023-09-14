@@ -1,37 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import Layout from "./Layout";
-import { facilityList } from "../text";
+import React from 'react';
+import styled from 'styled-components';
+import Layout from './Layout';
+import { facilityList, placeImgList } from '../text';
+import { CustomSlider, AutoSlider } from './atom';
 
 export default function Facility() {
   return (
     <Layout gap={100}>
-      <MainImg
-        src={process.env.PUBLIC_URL + "/img/s5-place.svg"}
-        alt="오피스 사계점 건물 이미지"
-      />
+      <CustomSlider list={placeImgList} name="place-" />
       <Wrap>
         {facilityList.map((el) => (
           <Grid key={el.id} id={el.id}>
             <div className="description">
-              <img
-                src={process.env.PUBLIC_URL + `/img/${el.icon}`}
-                alt="workspace 아이콘"
-              />
+              <img src={process.env.PUBLIC_URL + `/img/${el.icon}`} alt="workspace 아이콘" />
               <p>{el.description}</p>
             </div>
-            <img
-              className="subImg"
-              src={process.env.PUBLIC_URL + `/img/${el.image}`}
-              alt=""
-            />
+            <AutoSlider list={el.image} className="test" />
           </Grid>
         ))}
       </Wrap>
-      <MainImg
-        src={process.env.PUBLIC_URL + "/img/s5-remote.svg"}
-        alt="원격 근무 이미지"
-      />
+
+      <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" />
     </Layout>
   );
 }
@@ -48,12 +37,16 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
 
+  .test {
+    background-color: pink;
+  }
+
   .description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 1.88em;
     background-color: var(--light-color);
     order: ${({ id }) => (id === 2 ? 1 : 0)};
   }

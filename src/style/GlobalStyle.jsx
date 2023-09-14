@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -28,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: 'NanumSquareNeo-Variable';
 
+    @media (max-width: 1194px) {
+      font-size: 12px;
+    }
   }
 
   button {

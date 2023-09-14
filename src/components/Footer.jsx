@@ -23,8 +23,8 @@ export default function Footer() {
 }
 
 const Text = styled.p`
-  font-size: 1rem;
-  line-height: 27px;
+  font-size: 1em;
+  line-height: 1.69em;
   text-align: center;
 
   strong {
@@ -34,8 +34,11 @@ const Text = styled.p`
 
 const Partnership = styled.div`
   display: flex;
-  width: 42.313rem;
   align-items: center;
-  gap: 62px;
-  margin-top: 36px;
+  gap: 3.88em;
+  margin-top: 2.25em;
+
+  img {
+    width: 12em;
+  }
 `;

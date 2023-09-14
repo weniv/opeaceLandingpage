@@ -1,26 +1,20 @@
-import React from "react";
-import { Layout } from "./index";
-import { Title, SubTitle } from "./atom";
-import styled from "styled-components";
-import { companyIntroList, googleFormLink } from "../text";
+import React from 'react';
+import { Layout } from './index';
+import { Title, SubTitle } from './atom';
+import styled from 'styled-components';
+import { companyIntroList, googleFormLink } from '../text';
 
 export default function CompanyIntro() {
   return (
     <Layout>
       <Title>기업 소개</Title>
-      <SubTitle>
-        본 프로젝트는 오피스제주, 주식회사 위니브 2개사가 연합하여 공동
-        진행합니다.
-      </SubTitle>
+      <SubTitle>본 프로젝트는 오피스제주, 주식회사 위니브 2개사가 연합하여 공동 진행합니다.</SubTitle>
 
       <Wrap>
         {companyIntroList.map((el) => (
           <Grid key={el.id}>
             <div className="companyImg">
-              <img
-                src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`}
-                alt={`${el.logo} 로고 이미지`}
-              />
+              <img src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`} alt={`${el.logo} 로고 이미지`} />
             </div>
             <div className="description">
               <strong>{el.title}</strong>
@@ -36,7 +30,7 @@ export default function CompanyIntro() {
       </Wrap>
 
       <Apply>
-        <img src={process.env.PUBLIC_URL + "/img/workation.svg"} alt="" />
+        <img src={process.env.PUBLIC_URL + '/img/workation.svg'} alt="" />
         <button>
           <a href={googleFormLink} target="_blank" rel="noreferrer">
             제주 온보딩 워케이션 신청하기
@@ -48,52 +42,60 @@ export default function CompanyIntro() {
 }
 
 const Wrap = styled.div`
+  width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 1.88rem;
   margin: 36px 0 100px 0;
+
+  @media (max-width: 1194px) {
+    padding: 0 20px;
+  }
 `;
 
 const Grid = styled.div`
   display: grid;
   width: 36.375rem;
   height: 18.188rem;
-  border: 3px solid #f5f5f5;
   grid-template-columns: 50% 50%;
 
   div.companyImg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light-color);
+    border: 3px solid #f5f5f5;
+
+    img {
+      width: 11em;
+    }
   }
 
   div.description {
     display: flex;
     flex-direction: column;
-    padding: 49px 0 49px 30px;
+    padding: 3.06em 1.88em;
     background-color: #f5f5f5;
 
     strong {
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: bold;
       white-space: pre-wrap;
       margin-bottom: 17px;
-      line-height: 1.625rem;
+      line-height: 1.625em;
     }
     p {
-      font-size: 0.625rem;
+      font-size: 0.625em;
       white-space: pre-wrap;
       line-height: 1.125rem;
     }
     button {
-      width: 8.063rem;
-      height: 2.125rem;
+      width: 8.063em;
+      height: 2.125em;
       border-radius: 28px;
       background-color: var(--dark-color);
-      margin-top: 36px;
+      margin-top: 2.25em;
 
       a {
-        font-size: 14px;
+        font-size: 0.88em;
         font-weight: 500;
         color: var(--light-color);
         cursor: pointer;
