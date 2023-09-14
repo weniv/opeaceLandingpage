@@ -86,5 +86,40 @@ export const planList = [
   { id: 4, title: '비용', description: '무료' },
 ];
 
+// current 0 - 前 (전)
+// current 1 - 現 (현)
+export const TutorList = [
+  {
+    id: 1,
+    title: '피그마로 협업하기',
+    name: '소울곰',
+    career: [
+      { id: 1, current: 1, position: '주식회사 위니브 CDO' },
+      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
+      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+    ],
+  },
+  {
+    id: 2,
+    title: '개발자를 위한 UI/UX 살펴보기',
+    name: '소울곰',
+    career: [
+      { id: 1, current: 1, position: '주식회사 위니브 CDO' },
+      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
+      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Hello, Mr.my yesterday',
+    name: '소울곰',
+    career: [
+      { id: 1, current: 1, position: '주식회사 위니브 CDO' },
+      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
+      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+    ],
+  },
+];
+
 export const googleFormLink =
   'https://docs.google.com/forms/d/e/1FAIpQLSdXsz3PW4bfbdlvUiELRplAAbXh-RaNb0mJJsE3CowMKZD-mg/viewform';

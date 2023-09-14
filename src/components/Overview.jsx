@@ -64,5 +64,12 @@ const Plan = styled.div`
     border-radius: 24px;
     color: var(--light-color);
     background-color: var(--dark-color);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 1rem;
   }
 `;

@@ -1,14 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { googleFormLink } from "../text";
+import React from 'react';
+import styled from 'styled-components';
+import { googleFormLink } from '../text';
 
 export default function Header() {
   return (
     <Wrap>
-      <img
-        src={process.env.PUBLIC_URL + `/img/logo.svg`}
-        alt={` 로고 이미지`}
-      />
+      <img src={process.env.PUBLIC_URL + `/img/logo.svg`} alt={` 로고 이미지`} />
       <button>
         <a href={googleFormLink} target="_blank" rel="noreferrer">
           신청하기
@@ -25,6 +22,7 @@ const Wrap = styled.header`
   width: 100%;
   height: 4.75rem;
   background-color: var(--light-color);
+  padding: 0 30px;
 
   img {
     cursor: pointer;

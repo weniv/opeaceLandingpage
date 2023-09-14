@@ -1,16 +1,17 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import {
   Header,
   Banner,
   Overview,
   Schedule,
+  WenivIntro,
+  Tutor,
   Notification,
   Facility,
-  QnA,
   CompanyIntro,
   Footer,
-} from "../components/index";
+} from '../components/index';
 
 export default function Main() {
   return (
@@ -19,9 +20,10 @@ export default function Main() {
       <Banner />
       <Overview />
       <Schedule />
+      <WenivIntro />
+      <Tutor />
       <Notification />
       <Facility />
-      <QnA />
       <CompanyIntro />
       <Footer />
     </Layout>
