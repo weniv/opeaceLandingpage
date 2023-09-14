@@ -30,7 +30,7 @@ export default function Main() {
       <Facility />
       <CompanyIntro />
       <Footer />
-      <FloatingBtn />
+      {!isMobile && <FloatingBtn />}
     </Layout>
   );
 }
