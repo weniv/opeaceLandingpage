@@ -1,28 +1,31 @@
-import React, { createContext, useState, useEffect } from "react";
+import { debounce } from 'lodash';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 
 const ResizeContext = createContext();
 
 export function ResizeProvider({ children }) {
-  const [resizeWidth, setResizeWidth] = useState(window.innerWidth / 1920);
-  const [resizeHeight, setResizeHeight] = useState(window.innerHeight / 1080);
+  const [isMobile, setIsMobile] = useState(!matchMedia('screen and (min-width: 768px)').matches);
 
-  const resizeRatio = () => {
-    setResizeWidth(window.innerWidth / 1920);
-    setResizeHeight(window.innerHeight / 1080);
-  };
+  const resizeRatio = debounce(() => {
+    // console.log('innerWidth', window.innerWidth);
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, 500);
 
   useEffect(() => {
-    window.addEventListener("resize", resizeRatio);
-    return () => {
-      window.removeEventListener("resize", resizeRatio);
-    };
-  }, [resizeWidth, resizeHeight]);
+    window.addEventListener('resize', resizeRatio);
 
-  return (
-    <ResizeContext.Provider value={{ resizeWidth, resizeHeight }}>
-      {children}
-    </ResizeContext.Provider>
-  );
+    return () => {
+      window.removeEventListener('resize', resizeRatio);
+    };
+  }, []);
+
+  return <ResizeContext.Provider value={{ isMobile }}>{children}</ResizeContext.Provider>;
 }
 
-export default ResizeContext;
+export function useResizeContext() {
+  return useContext(ResizeContext);
+}
