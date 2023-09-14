@@ -2,8 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from './Layout';
 import { Title, SubTitle } from './atom';
+import { useResizeContext } from '../context/ResizeContext';
 
 export default function WenivIntro() {
+  const { isMobile } = useResizeContext();
+
   return (
     <Layout padding={'50px 0 0 0'}>
       <Title>제주 온보딩 워케이션 교육기관 소개</Title>
@@ -15,7 +18,7 @@ export default function WenivIntro() {
         <img src={process.env.PUBLIC_URL + `/img/wenivFriends.svg`} alt="위니브 프렌즈 이미지" />
         <figcaption>WenivFriends</figcaption>
       </Char>
-      <Archive>
+      <Archive isMobile={isMobile}>
         <div className="archive">
           <img src={process.env.PUBLIC_URL + '/img/archive.svg'} alt="위니브 아카이브 이미지" />
           <div>
@@ -52,39 +55,42 @@ const Char = styled.figure`
 const Archive = styled.div`
   position: relative;
   width: 100%;
-  height: 28.125rem;
+  height: ${({ isMobile }) => (isMobile ? '23.75rem' : '28.125rem')};
   margin-top: 70px;
 
   div.archive {
     display: flex;
+    flex-direction: ${({ isMobile }) => (isMobile ? 'column' : 'row')};
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(2, 255, 153, 0.6);
     z-index: 999;
-    padding: 0 102px;
     align-items: center;
     justify-content: space-between;
+    padding: ${({ isMobile }) => (isMobile ? '34px 0' : '0 102px')};
 
     img {
-      width: 30rem;
+      width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30rem')};
     }
 
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
+      gap: ${({ isMobile }) => (isMobile ? '20px' : '36px')};
+      flex-shrink: 0;
 
       p {
         text-align: center;
-        font-size: 1.625rem;
+        font-size: ${({ isMobile }) => (isMobile ? '1rem' : '1.625rem')};
         font-weight: bold;
-        line-height: 2.25rem;
+        line-height: ${({ isMobile }) => (isMobile ? '1.625rem' : '2.25rem')};
+        margin-top: ${({ isMobile }) => (isMobile ? '27px' : 0)};
       }
 
       button {
-        width: 220px;
+        width: ${({ isMobile }) => (isMobile ? '145px' : '220px')};
         height: 40px;
         background-color: var(--dark-color);
         color: var(--light-color);
@@ -93,7 +99,7 @@ const Archive = styled.div`
 
       a {
         color: var(--light-color);
-        font-size: 0.938rem;
+        font-size: ${({ isMobile }) => (isMobile ? '0.75rem' : '0.938rem')};
       }
     }
   }
