@@ -11,7 +11,7 @@ export default function Tutor() {
         <Title>제주 온보딩 워케이션 강사 소개</Title>
         <TutorWrap>
           {TutorList.map((cls) => (
-            <Card>
+            <Card key={cls.id}>
               <h3>{cls.title}</h3>
               <div className="tutorInfo">
                 <img src={process.env.PUBLIC_URL + '/img/test.png'} alt="강사 소개 이미지" />
@@ -21,7 +21,7 @@ export default function Tutor() {
                   </p>
                   <div className="tutorCareer">
                     {cls.career.map((el) => (
-                      <p>
+                      <p key={el.id}>
                         {el.current === 1 ? <span className="current">現</span> : <span className="former">前</span>}
                         {el.position}
                       </p>

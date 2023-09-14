@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Layout from "./Layout";
-import { partnershipList } from "../text";
+import React from 'react';
+import styled from 'styled-components';
+import Layout from './Layout';
+import { partnershipList } from '../text';
 
 export default function Footer() {
   return (
@@ -15,10 +15,7 @@ export default function Footer() {
       </Text>
       <Partnership>
         {partnershipList.map((el) => (
-          <img
-            src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`}
-            alt={`${el.logo} 로고 이미지`}
-          />
+          <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`} alt={`${el.logo} 로고 이미지`} />
         ))}
       </Partnership>
     </Layout>
