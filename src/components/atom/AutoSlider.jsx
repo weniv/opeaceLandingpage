@@ -31,8 +31,8 @@ export default function AutoSlider({ list }) {
 
 const Wrap = styled.div`
   width: auto;
-  background-color: pink;
   img {
+    cursor: pointer;
     object-fit: cover;
   }
 `;
