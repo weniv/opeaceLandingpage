@@ -37,11 +37,12 @@ export default function WenivIntro() {
               다양한 ICT 콘텐츠를 모아 보세요!
             </p>
             <button>
-              <a href="/">위니브 콘텐츠 아카이브</a>
+              <a href="https://archive.weniv.co.kr/" target="_blank" rel="noreferrer">
+                위니브 콘텐츠 아카이브
+              </a>
             </button>
           </div>
         </div>
-        <img className="bg" src={process.env.PUBLIC_URL + '/img/archive-bg.svg'} />
       </Archive>
     </Layout>
   );
@@ -49,7 +50,7 @@ export default function WenivIntro() {
 
 const Char = styled.figure`
   img {
-    width: ${({ isMobile }) => (isMobile ? '23.43rem' : '49.125rem')};
+    width: ${({ isMobile }) => (isMobile ? '100%' : '49.125rem')};
     margin-top: ${({ isMobile }) => (isMobile ? '20px' : '36px')};
   }
 
@@ -80,6 +81,7 @@ const Archive = styled.div`
     padding: ${({ isMobile }) => (isMobile ? '34px 0' : '0 6.38em')};
     justify-content: center;
     gap: 11%;
+    gap: ${({ isMobile }) => (isMobile ? 0 : '11%')};
 
     img {
       width: ${({ isMobile }) => (isMobile ? '15.875rem' : '30em')};
@@ -121,8 +123,18 @@ const Archive = styled.div`
     }
   }
 
-  img.bg {
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
     opacity: 0.2;
+    background-image: url(${process.env.PUBLIC_URL + '/img/archive-bg.svg'});
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
   }
 `;

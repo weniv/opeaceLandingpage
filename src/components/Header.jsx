@@ -59,7 +59,7 @@ const MobileWrap = styled.header`
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
-    algin-items: center;
+    align-items: center;
 
     img {
       width: calc(100% - 10px);
@@ -85,7 +85,7 @@ const Wrap = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 7.5rem;
     height: 2.5rem;
     border-radius: 30px;
