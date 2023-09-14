@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-export default function SubTitle({ children }) {
-  return <Text>{children}</Text>;
+export default function SubTitle({ children, isMobile }) {
+  return <Text isMobile={isMobile}>{children}</Text>;
 }
 
 const Text = styled.p`
-  font-size: 1rem;
+  font-size: ${({ isMobile }) => (isMobile ? '0.75rem' : '1rem')};
   line-height: 27px;
   text-align: center;
 `;
