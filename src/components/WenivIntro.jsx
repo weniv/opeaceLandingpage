@@ -37,7 +37,9 @@ export default function WenivIntro() {
               다양한 ICT 콘텐츠를 모아 보세요!
             </p>
             <button>
-              <a href="/">위니브 콘텐츠 아카이브</a>
+              <a href="https://archive.weniv.co.kr/" target="_blank" rel="noreferrer">
+                위니브 콘텐츠 아카이브
+              </a>
             </button>
           </div>
         </div>
