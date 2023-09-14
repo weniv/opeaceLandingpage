@@ -13,7 +13,7 @@ export default function WenivIntro() {
       </SubTitle>
       <Char>
         <img src={process.env.PUBLIC_URL + `/img/wenivFriends.svg`} alt="위니브 프렌즈 이미지" />
-        <figcaption>WenivFriends</figcaption>
+        <figcaption>Weniv Friends</figcaption>
       </Char>
       <Archive>
         <div className="archive">
@@ -65,7 +65,7 @@ const Archive = styled.div`
     padding: 0 6.38em;
     align-items: center;
     justify-content: center;
-    gap: 8.38em;
+    gap: 11%;
 
     img {
       width: 30em;
@@ -76,6 +76,7 @@ const Archive = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 2.25em;
+      white-space: nowrap;
 
       p {
         text-align: center;
@@ -85,16 +86,17 @@ const Archive = styled.div`
       }
 
       button {
-        width: 13.75em;
-        height: 2.5em;
+        width: 13.75rem;
+        height: 2.5rem;
         background-color: var(--dark-color);
         color: var(--light-color);
         border-radius: 37px;
+        font-family: 'Pretendard-Regular';
       }
 
       a {
         color: var(--light-color);
-        font-size: 0.938em;
+        font-size: 0.938rem;
       }
     }
   }

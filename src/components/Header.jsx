@@ -30,13 +30,17 @@ const Wrap = styled.header`
   }
 
   button {
-    width: 7.5em;
-    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 7.5rem;
+    height: 2.5rem;
     border-radius: 30px;
     background-color: var(--main-color);
 
     a {
-      font-size: 0.87em;
+      font-size: 0.87rem;
       font-weight: bold;
       color: var(--dark-color);
     }

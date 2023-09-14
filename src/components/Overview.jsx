@@ -14,7 +14,11 @@ export default function Overview() {
         <br />
         비전을 가진 ICT 교육 콘텐츠 기업인 위니브가 함께
         <br />
-        <span>스타트업을 대상으로 Workation+Education 뜻의 워케이션 프로그램을 제공합니다.</span>
+        <span>
+          개발자와 원활한 소통이 필요한 기획자/디자이너 10분을 대상으로
+          <br />
+          Workation+Education 뜻의 워케이션 프로그램을 제공합니다.
+        </span>
       </Description>
       <Plan>
         {planList &&
@@ -40,7 +44,7 @@ const Description = styled.p`
 
   span {
     font-weight: bold;
-    color: var(--main-color);
+    color: #00d07c;
   }
 `;
 

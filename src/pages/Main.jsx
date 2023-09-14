@@ -12,6 +12,7 @@ import {
   CompanyIntro,
   Footer,
 } from '../components/index';
+import { FloatingBtn } from '../components/atom';
 
 export default function Main() {
   return (
@@ -26,12 +27,17 @@ export default function Main() {
       <Facility />
       <CompanyIntro />
       <Footer />
+      <FloatingBtn />
     </Layout>
   );
 }
 
 const Layout = styled.section`
+  display: flex;
+  flex-direction: column;
+  position: relative;
   max-width: 1194px;
+
   margin: 0 auto;
 
   @media (max-width: 1194px) {
