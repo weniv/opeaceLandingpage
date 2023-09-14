@@ -7,6 +7,5 @@ export { default as WenivIntro } from './WenivIntro';
 export { default as Tutor } from './Tutor';
 export { default as Notification } from './Notification';
 export { default as Facility } from './Facility';
-export { default as QnA } from './QnA';
 export { default as CompanyIntro } from './CompanyIntro';
 export { default as Footer } from './Footer';
