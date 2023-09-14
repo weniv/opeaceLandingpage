@@ -4,13 +4,6 @@ import styled from 'styled-components';
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../style/slider.css';
 
-const placeImgList = [
-  { id: 1, img: 'place-1', name: 'place' },
-  { id: 2, img: 'place-2', name: 'place' },
-  { id: 3, img: 'place-3', name: 'place' },
-  { id: 4, img: 'place-4', name: 'place' },
-];
-
 export default function CustomSlider({ list, name = 'place' }) {
   const settings = {
     customPaging: function (i) {
@@ -26,14 +19,14 @@ export default function CustomSlider({ list, name = 'place' }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    // pauseOnHover: true,
   };
   return (
     <Wrap>
       <Slider {...settings}>
-        {placeImgList.map((place) => (
+        {list.map((place) => (
           <div className="item">
             <img src={process.env.PUBLIC_URL + `/img/${place.img}.svg`} />
           </div>

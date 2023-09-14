@@ -12,10 +12,12 @@ import {
   CompanyIntro,
   Footer,
 } from '../components/index';
+import { AutoSlider } from '../components/atom';
 
 export default function Main() {
   return (
     <Layout>
+      {/* <AutoSlider /> */}
       <Header />
       <Banner />
       <Overview />

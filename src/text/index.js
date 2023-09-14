@@ -2,7 +2,12 @@ export const facilityList = [
   {
     id: 1,
     icon: 'workspaceIcon.svg',
-    image: 's5-workspace.svg',
+    image: [
+      { id: 1, img: 'workspace-1' },
+      { id: 2, img: 'workspace-2' },
+      { id: 3, img: 'workspace-3' },
+      { id: 4, img: 'workspace-4' },
+    ],
     description: `
       사계점의 공유오피스는 44개의 핫데스크로 운영됩니다.\n
       여유로운 분위기에서 업무가 가능하며 대관 가능한 세미나실도 있습니다.\n
@@ -11,23 +16,25 @@ export const facilityList = [
   },
   {
     id: 2,
-    icon: 'workspaceIcon.svg',
-    image: 's5-workspace.svg',
-    description: `
-      사계점의 공유오피스는 44개의 핫데스크로 운영됩니다.\n
-      여유로운 분위기에서 업무가 가능하며 대관 가능한 세미나실도 있습니다.\n
-      QR로 방음부스, 회의실을 에약해 자유롭게 화상회의도 가능합니다.
+    icon: 'staysIcon.svg',
+    image: [
+      { id: 1, img: 'stay-1' },
+      { id: 2, img: 'stay-2' },
+      { id: 3, img: 'stay-3' },
+      { id: 4, img: 'stay-4' },
+    ],
+    description: `사계점은 호텔형태의 공간에 공유오피스와\n
+    숙소 20객실이 함께 구성되어 있습니다.\n
+    전객실의 시설 수준은 동일하며 산방산뷰 객실(6)과\n
+    애견동반 객실(1)이 마련되어 있습니다. 
       `,
   },
   {
     id: 3,
-    icon: 'workspaceIcon.svg',
-    image: 's5-workspace.svg',
-    description: `
-      사계점의 공유오피스는 44개의 핫데스크로 운영됩니다.\n
-      여유로운 분위기에서 업무가 가능하며 대관 가능한 세미나실도 있습니다.\n
-      QR로 방음부스, 회의실을 에약해 자유롭게 화상회의도 가능합니다.
-      `,
+    icon: 'activitesIcon.svg',
+    image: [{ id: 1, img: 'activites' }],
+    description: `오피스아워(불멍), 바당요가, 사운드워킹 등\n
+    오피스제주에서만 누릴 수 있는 액티비티가 준비되어 있습니다.          `,
   },
 ];
 

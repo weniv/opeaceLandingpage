@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from './Layout';
 import { facilityList, placeImgList } from '../text';
-import { CustomSlider } from './atom';
+import { CustomSlider, AutoSlider } from './atom';
 
 export default function Facility() {
   return (
@@ -15,10 +15,11 @@ export default function Facility() {
               <img src={process.env.PUBLIC_URL + `/img/${el.icon}`} alt="workspace 아이콘" />
               <p>{el.description}</p>
             </div>
-            <img className="subImg" src={process.env.PUBLIC_URL + `/img/${el.image}`} alt="" />
+            <AutoSlider list={el.image} className="test" />
           </Grid>
         ))}
       </Wrap>
+
       <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" />
     </Layout>
   );
@@ -35,6 +36,10 @@ const Wrap = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
+
+  .test {
+    background-color: pink;
+  }
 
   .description {
     display: flex;
