@@ -137,3 +137,34 @@ export const placeImgList = [
 
 export const googleFormLink =
   'https://docs.google.com/forms/d/e/1FAIpQLSdXsz3PW4bfbdlvUiELRplAAbXh-RaNb0mJJsE3CowMKZD-mg/viewform';
+
+export const ScheduleList = [
+  {
+    id: 1,
+    program: [
+      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+    ],
+  },
+  {
+    id: 2,
+    program: [
+      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+    ],
+  },
+  {
+    id: 3,
+    program: [
+      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+    ],
+  },
+  {
+    id: 4,
+    program: [
+      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+    ],
+  },
+];
