@@ -10,10 +10,19 @@ export default function WenivIntro() {
   return (
     <Layout padding={'50px 0 0 0'}>
       <Title isMobile={isMobile}>제주 온보딩 워케이션 교육기관 소개</Title>
-      <SubTitle isMobile={isMobile}>
-        주식회사 위니브는 ICT 교육 콘텐츠 및 각종 ICT 부트캠프를 운영하고 있습니다.
-        <br />본 프로그램에서는 파이썬, 자바스크립트 등 기초코딩교육 및 협업툴 교육이 진행됩니다.
-      </SubTitle>
+      {isMobile ? (
+        <SubTitle isMobile={isMobile}>
+          주식회사 위니브는 ICT 교육 콘텐츠 및 <br />
+          각종 ICT 부트캠프를 운영하고 있습니다.
+          <br />본 프로그램에서는 온보딩/협업툴/기본코딩 <br />
+          교육 프로그램이 진행됩니다.
+        </SubTitle>
+      ) : (
+        <SubTitle>
+          주식회사 위니브는 ICT 교육 콘텐츠 및 각종 ICT 부트캠프를 운영하고 있습니다.
+          <br />본 프로그램에서는 파이썬, 자바스크립트 등 기초코딩교육 및 협업툴 교육이 진행됩니다.
+        </SubTitle>
+      )}
       <Char isMobile={isMobile}>
         <img src={process.env.PUBLIC_URL + `/img/wenivFriends.svg`} alt="위니브 프렌즈 이미지" />
         <figcaption>Weniv Friends</figcaption>
@@ -41,7 +50,7 @@ export default function WenivIntro() {
 const Char = styled.figure`
   img {
     width: ${({ isMobile }) => (isMobile ? '23.43rem' : '49.125rem')};
-    margin-top: 36px;
+    margin-top: ${({ isMobile }) => (isMobile ? '20px' : '36px')};
   }
 
   figcaption {

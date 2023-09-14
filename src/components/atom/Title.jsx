@@ -9,4 +9,5 @@ const Text = styled.h2`
   font-size: ${({ isMobile }) => (isMobile ? '1.25rem' : '1.688rem')};
   margin-bottom: ${({ isMobile }) => (isMobile ? '12px' : '17px')};
   text-align: center;
+  font-weight: 800;
 `;
