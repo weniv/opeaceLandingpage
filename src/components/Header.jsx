@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { googleFormLink } from "../text";
 
 export default function Header() {
   return (
@@ -9,7 +10,9 @@ export default function Header() {
         alt={` 로고 이미지`}
       />
       <button>
-        <a href="/">신청하기</a>
+        <a href={googleFormLink} target="_blank" rel="noreferrer">
+          신청하기
+        </a>
       </button>
     </Wrap>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "./index";
 import { Title, SubTitle } from "./atom";
 import styled from "styled-components";
-import { companyIntroList } from "../text";
+import { companyIntroList, googleFormLink } from "../text";
 
 export default function CompanyIntro() {
   return (
@@ -38,7 +38,9 @@ export default function CompanyIntro() {
       <Apply>
         <img src={process.env.PUBLIC_URL + "/img/workation.svg"} alt="" />
         <button>
-          <a href="/">제주 온보딩 워케이션 신청하기</a>
+          <a href={googleFormLink} target="_blank" rel="noreferrer">
+            제주 온보딩 워케이션 신청하기
+          </a>
         </button>
       </Apply>
     </Layout>

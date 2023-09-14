@@ -22,19 +22,23 @@ export default function QnA() {
       <MenuWrap>
         {qnaList.map((el) => (
           <div key={el.id}>
-            <div className="question">
+            <div
+              className="question"
+              onClick={() => {
+                activeId(el.id);
+                listOpen(el.id);
+              }}
+            >
               <p>{el.question}</p>
               <img
                 src={process.env.PUBLIC_URL + `/img/downarrow.svg`}
-                onClick={() => {
-                  activeId(el.id);
-                  listOpen(el.id);
-                }}
                 className={el.id === curId && isOpen ? "open" : ""}
               />
             </div>
             {el.id === curId && isOpen ? (
-              <div className="answer">
+              <div
+                className={el.id === curId && isOpen ? "open answer" : "answer"}
+              >
                 <p>{el.answer}</p>
               </div>
             ) : null}
@@ -60,10 +64,10 @@ const MenuWrap = styled.div`
     padding: 0 10px;
     background-color: var(--light-color);
     border-top: 1px solid var(--dark-color);
+    cursor: pointer;
 
     img {
       width: 1.063rem;
-      cursor: pointer;
       transition: transform 0.3s ease-in-out;
     }
 
@@ -73,9 +77,26 @@ const MenuWrap = styled.div`
   }
 
   div.answer {
-    padding: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    /* height: 0;
+    transition: height 0.3s ease-in-out; */
+  }
+
+  div.answer.open {
+    height: auto; /* 내용의 높이에 따라 자동으로 조절됩니다. */
+    padding: 15px;
+    /* height: 47px; */
     font-size: 0.875rem;
     border-top: 1px solid #d9d9d9;
     background-color: var(--light-color);
+    transition: height 0.3s ease-in-out;
+    /* padding: 10px;
+    height: 47px;
+    font-size: 0.875rem;
+    border-top: 1px solid #d9d9d9;
+    background-color: var(--light-color);
+    transition: height 0.3s ease-in-out; */
   }
 `;
