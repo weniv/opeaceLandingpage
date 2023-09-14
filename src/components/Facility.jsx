@@ -19,7 +19,15 @@ export default function Facility() {
           </Grid>
         ))}
       </Wrap>
-
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/xXwyt8Ybqlw?si=WhyQwRxEkuy6goQy"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
       <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" />
     </Layout>
   );

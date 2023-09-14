@@ -89,7 +89,7 @@ export const partnershipList = [
 export const planList = [
   { id: 1, title: '모집기간', description: '2023.10.16(월) - 10.20(금) (변경가능)' },
   { id: 2, title: '행사기간', description: '2023.10.9 ~ 10.12 (3박 4일간) (변경가능)' },
-  { id: 3, title: '행사장소', description: '서귀포시 향교로 214 오피스제주 사게점 세미나실' },
+  { id: 3, title: '행사장소', description: '서귀포시 향교로 214 오피스제주 사계점 세미나실' },
   { id: 4, title: '비용', description: '무료' },
 ];
 
