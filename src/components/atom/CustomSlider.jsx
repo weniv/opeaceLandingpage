@@ -37,6 +37,7 @@ export default function CustomSlider({ list, name = 'place' }) {
 }
 
 const Wrap = styled.div`
+  width: 100%;
   max-width: 786px;
 
   img {
