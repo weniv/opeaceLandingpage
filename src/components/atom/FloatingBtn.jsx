@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // const url = window.location.href;
 const url = 'https://weniv.github.io/opeaceXweniv-workation/';
-const kakaoKey = 'ad94775731471fcd2b15cdb4f936193d';
+const kakaoKey = process.env.REACT_APP_KAKAO_KEY;
 const Kakao = window.Kakao;
 
 export default function FloatingBtn() {
@@ -13,7 +13,7 @@ export default function FloatingBtn() {
     // init 해주기 전에 clean up 을 해준다.
     Kakao.cleanup();
     // 자신의 js 키를 넣어준다.
-    Kakao.init('ad94775731471fcd2b15cdb4f936193d');
+    Kakao.init(kakaoKey);
     // 잘 적용되면 true 를 뱉는다.
     console.log(Kakao.isInitialized());
   }, []);
@@ -40,11 +40,7 @@ export default function FloatingBtn() {
     alert('링크가 복사되었습니다!');
   };
 
-  // 카카오톡 공유하기
-  // Kakao.init('969928'); // 여기에 앱 키를 입력하세요
-
   const handleKakaoShare = () => {
-    console.log(1555);
     Kakao.Share.sendDefault({
       objectType: 'text',
       text: '기본 템플릿으로 제공되는 텍스트 템플릿은 텍스트를 최대 200자까지 표시할 수 있습니다. 텍스트 템플릿은 텍스트 영역과 하나의 기본 버튼을 가집니다. 임의의 버튼을 설정할 수도 있습니다. 여러 장의 이미지, 프로필 정보 등 보다 확장된 형태의 카카오톡 공유는 다른 템플릿을 이용해 보낼 수 있습니다.',
@@ -87,6 +83,7 @@ const Wrap = styled.div`
   top: 42.938rem;
   gap: 1.313rem;
   align-self: flex-end;
+  z-index: 999;
 
   div.expand {
     position: absolute;
