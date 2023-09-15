@@ -15,7 +15,7 @@ export default function Schedule() {
       {!isMobile && <Table src={process.env.PUBLIC_URL + '/img/s3-table.svg'}></Table>}
       {isMobile && (
         <>
-          <Message>※ 프로그램 신청시 스케쥴 변동이 가능합니다. :)</Message>
+          <Message>※ 프로그램 신청 시 스케줄 변동이 가능합니다. :)</Message>
           {ScheduleList.map((schedule) => (
             <MobileTable key={schedule.id} schedule={schedule} />
           ))}

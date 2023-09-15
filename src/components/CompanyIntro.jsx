@@ -13,12 +13,11 @@ export default function CompanyIntro() {
     <>
       {isMobile && <MobileCompanyIntro />}
       {!isMobile && (
-    <Layout>
-      <Title isMobile={isMobile}>기업 소개</Title>
-      <SubTitle isMobile={isMobile}>
-        본 프로젝트는 오피스제주, 주식회사 위니브 2개사가 연합하여 공동 진행합니다.
-      </SubTitle>
-
+        <Layout>
+          <Title isMobile={isMobile}>기업 소개</Title>
+          <SubTitle isMobile={isMobile}>
+            본 프로젝트는 오피스 제주, 주식회사 위니브 2개사가 연합하여 공동 진행합니다.
+          </SubTitle>
 
           <Wrap>
             {companyIntroList.map((el) => (

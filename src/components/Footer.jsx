@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <Layout>
       <Text isMobile={isMobile}>
-        제주 온보딩 워케이션 프로그램 JTP제주테크노파크의
+        제주 온보딩 워케이션 프로그램 JTP 제주테크노파크의
         <br />
         <strong>[디지털 트랜스포메이션 관광융합 프로젝트]</strong>
         <br />

@@ -20,16 +20,16 @@ export default function WenivIntro() {
       ) : (
         <SubTitle>
           주식회사 위니브는 ICT 교육 콘텐츠 및 각종 ICT 부트캠프를 운영하고 있습니다.
-          <br />본 프로그램에서는 파이썬, 자바스크립트 등 기초코딩교육 및 협업툴 교육이 진행됩니다.
+          <br />본 프로그램에서는 파이썬, 자바스크립트 등 기초코딩교육 및 협업 툴 교육이 진행됩니다.
         </SubTitle>
       )}
       <Char isMobile={isMobile}>
-        <img src={process.env.PUBLIC_URL + `/img/wenivFriends.svg`} alt="위니브 프렌즈 이미지" />
+        <img src={process.env.PUBLIC_URL + `/img/wenivFriends.jpg`} alt="위니브 프렌즈 이미지" />
         <figcaption>Weniv Friends</figcaption>
       </Char>
       <Archive isMobile={isMobile}>
         <div className="archive">
-          <img src={process.env.PUBLIC_URL + '/img/archive.svg'} alt="위니브 아카이브 이미지" />
+          <img src={process.env.PUBLIC_URL + '/img/archive.jpg'} alt="위니브 아카이브 이미지" />
           <div>
             <p>
               주식회사 위니브의
