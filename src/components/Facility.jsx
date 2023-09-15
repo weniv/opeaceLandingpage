@@ -19,22 +19,24 @@ export default function Facility() {
           </Grid>
         ))}
       </Wrap>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/xXwyt8Ybqlw?si=WhyQwRxEkuy6goQy"
+      <Video
+        width="786px"
+        height="444px"
+        src="https://www.youtube-nocookie.com/embed/xXwyt8Ybqlw?si=WhyQwRxEkuy6goQy&mute=1&autoplay=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-      ></iframe>
-      <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" />
+      ></Video>
+      {/* <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" /> */}
     </Layout>
   );
 }
 
-const MainImg = styled.img`
-  max-width: 786px;
+const Video = styled.iframe`
+  @media (max-width: 786px) {
+    max-width: 100%;
+  }
 `;
 
 const Wrap = styled.div`
