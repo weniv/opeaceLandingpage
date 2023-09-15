@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from './Layout';
 import { facilityList, placeImgList } from '../text';
-import { CustomSlider, AutoSlider } from './atom';
+import { CustomSlider, AutoSlider, VideoPlayer } from './atom';
 
 export default function Facility() {
   return (
@@ -19,23 +19,10 @@ export default function Facility() {
           </Grid>
         ))}
       </Wrap>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/xXwyt8Ybqlw?si=WhyQwRxEkuy6goQy"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-      <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" />
+      <VideoPlayer />
     </Layout>
   );
 }
-
-const MainImg = styled.img`
-  max-width: 786px;
-`;
 
 const Wrap = styled.div`
   width: 100%;
