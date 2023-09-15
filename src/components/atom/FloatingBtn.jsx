@@ -6,6 +6,8 @@ const url = 'https://weniv.github.io/opeaceXweniv-workation/';
 const kakaoKey = process.env.REACT_APP_KAKAO_KEY;
 const Kakao = window.Kakao;
 
+console.log('kakaoKey', !!kakaoKey);
+
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -80,7 +82,9 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 42.938rem;
+  /* top: 42.938rem; */
+  bottom: 23vh;
+  /* bottom: 15.563rem; */
   gap: 1.313rem;
   align-self: flex-end;
   z-index: 999;
