@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from './Layout';
 import { facilityList, placeImgList } from '../text';
-import { CustomSlider, AutoSlider } from './atom';
+import { CustomSlider, AutoSlider, VideoPlayer } from './atom';
 import { useResizeContext } from '../context/ResizeContext';
+
 
 export default function Facility() {
   const { isMobile } = useResizeContext();
@@ -23,25 +24,10 @@ export default function Facility() {
           </Grid>
         ))}
       </Wrap>
-      <Video
-        width="786px"
-        height="444px"
-        src="https://www.youtube-nocookie.com/embed/xXwyt8Ybqlw?si=WhyQwRxEkuy6goQy&mute=1&autoplay=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></Video>
-      {/* <MainImg src={process.env.PUBLIC_URL + '/img/s5-remote.svg'} alt="원격 근무 이미지" /> */}
+      <VideoPlayer />
     </Layout>
   );
 }
-
-const Video = styled.iframe`
-  @media (max-width: 786px) {
-    max-width: 100%;
-  }
-`;
 
 const Wrap = styled.div`
   width: 100%;
