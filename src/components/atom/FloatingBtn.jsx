@@ -82,9 +82,7 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  /* top: 42.938rem; */
-  bottom: 23vh;
-  /* bottom: 15.563rem; */
+  bottom: 3vh;
   gap: 1.313rem;
   align-self: flex-end;
   z-index: 999;
@@ -141,6 +139,7 @@ const Wrap = styled.div`
     background-position: 50% 50%;
     border: none;
     z-index: 999;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
   button.shareBtn {
