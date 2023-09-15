@@ -3,8 +3,11 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../style/slider.css';
+import { useResizeContext } from '../../context/ResizeContext';
 
-export default function AutoSlider({ list }) {
+export default function AutoSlider({ list, isFull }) {
+  const { isMobile } = useResizeContext();
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -20,7 +23,7 @@ export default function AutoSlider({ list }) {
       <Slider {...settings}>
         {list &&
           list.map((el) => (
-            <Wrap>
+            <Wrap isMobile={isMobile} isFull={isFull}>
               <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.img}.svg`} />
             </Wrap>
           ))}
@@ -34,5 +37,11 @@ const Wrap = styled.div`
   img {
     cursor: pointer;
     object-fit: cover;
+    margin: 0 auto;
+    width: ${({ isMobile }) => isMobile && 'calc(100vw - 110px)'};
+    min-width: 266px;
+    min-height: ${({ isMobile }) => isMobile && '150px'};
+    width: ${({ isFull }) => isFull && '100%'};
+    min-height: ${({ isFull }) => isFull && '200px'};
   }
 `;

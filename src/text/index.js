@@ -42,29 +42,6 @@ export const facilityList = [
   },
 ];
 
-export const qnaList = [
-  {
-    id: 1,
-    question: 'Q. 워케이션 예약 가능한 최대 인원 수가 있나요?',
-    answer: '워케이션 예약 가능한 최대 인원 수가 있나요?',
-  },
-  {
-    id: 2,
-    question: 'Q. 워케이션 신청 후 일정 변경이나 취소가 가능한가요?',
-    answer: '교육 내용은 변경 불가하나, 스케쥴 변동은 가능합니다.',
-  },
-  {
-    id: 3,
-    question: 'Q. 꼭 회사 동료들과 함께 신청해야 하나요? 프리랜서나 친구와 함께 참여하고 싶은데 가능한가요?',
-    answer: '교육 내용은 변경 불가하나, 스케쥴 변동은 가능합니다.',
-  },
-  {
-    id: 4,
-    question: 'Q. 워케이션 숙소 위치를 알고 싶어요!',
-    answer: '교육 내용은 변경 불가하나, 스케쥴 변동은 가능합니다.',
-  },
-];
-
 export const companyIntroList = [
   {
     id: 1,
