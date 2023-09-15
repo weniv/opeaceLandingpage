@@ -36,8 +36,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
         if: steps.cache.outputs.cache-hit != 'true'
-        env:
-          REACT_APP_KAKAO_KEY: ${{ secrets.REACT_APP_KAKAO_KEY }}
+
+      - name: .env setting
+        run: |
+          echo "REACT_APP_KAKAO_KEY=${{ secrets.REACT_APP_KAKAO_KEY }}" >> .env
 
       - name: Set PUBLIC_URL
         run: |
