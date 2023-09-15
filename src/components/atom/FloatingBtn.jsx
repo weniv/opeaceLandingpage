@@ -7,17 +7,67 @@ export default function FloatingBtn() {
     // 버튼이 클릭될 때 수행할 작업 정의
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // 부드러운 스크롤 효과를 원하면 추가
+    });
+  };
+
+  const copyToClipboard = (textToCopy) => {
+    // 텍스트를 클립보드에 복사합니다.
+    const textArea = document.createElement('textarea');
+    textArea.value = textToCopy;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  };
+
+  const copyCurrentPageURL = () => {
+    const currentPageURL = window.location.href;
+    copyToClipboard(currentPageURL);
+    alert('링크가 복사되었습니다: ' + currentPageURL);
+  };
+
+  // 카카오톡 공유하기
+  // Kakao.init('YOUR_APP_KEY'); // 여기에 앱 키를 입력하세요
+
+  const shareToKakao = () => {
+    // Kakao.Link.sendDefault({
+    //   objectType: 'feed',
+    //   content: {
+    //     title: '타이틀',
+    //     description: '설명',
+    //     imageUrl: '이미지 URL',
+    //     link: {
+    //       mobileWebUrl: '모바일 웹 URL',
+    //       webUrl: '웹 URL',
+    //     },
+    //   },
+    // });
+  };
+
   return (
     <Wrap>
-      <div className="expand">
-        <div>
-          <button className="linkBtn"></button>
-          <hr />
-          <button className="kakaoBtn"></button>
+      {isOpen ? (
+        <div className="expand" onMouseOver={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+          <div>
+            <button className="linkBtn" type="button" onClick={copyCurrentPageURL}></button>
+            <hr />
+            <button className="kakaoBtn" type="button" onClick={shareToKakao}></button>
+          </div>
         </div>
-      </div>
-      <button className="circle shareBtn" onClick={handleButtonClick}></button>
-      <button className="circle topBtn" onClick={handleButtonClick}></button>
+      ) : null}
+
+      <button
+        className="circle shareBtn"
+        onClick={handleButtonClick}
+        onMouseOver={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        type="button"
+      ></button>
+      <button className="circle topBtn" onClick={scrollToTop} type="button"></button>
     </Wrap>
   );
 }
@@ -27,8 +77,8 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 250px;
-  gap: 21px;
+  bottom: 15.625rem;
+  gap: 1.313rem;
   align-self: flex-end;
 
   div.expand {
