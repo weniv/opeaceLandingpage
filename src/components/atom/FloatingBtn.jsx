@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+// const url = window.location.href;
+const url = 'https://weniv.github.io/opeaceXweniv-workation/';
+const kakaoKey = 'ad94775731471fcd2b15cdb4f936193d';
+const Kakao = window.Kakao;
 
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(false);
-  const handleButtonClick = () => {
-    // 버튼이 클릭될 때 수행할 작업 정의
-  };
+
+  useEffect(() => {
+    // init 해주기 전에 clean up 을 해준다.
+    Kakao.cleanup();
+    // 자신의 js 키를 넣어준다.
+    Kakao.init('ad94775731471fcd2b15cdb4f936193d');
+    // 잘 적용되면 true 를 뱉는다.
+    console.log(Kakao.isInitialized());
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // 부드러운 스크롤 효과를 원하면 추가
+      behavior: 'smooth',
     });
   };
 
+  // 텍스트 클립보드에 복사
   const copyToClipboard = (textToCopy) => {
-    // 텍스트를 클립보드에 복사합니다.
     const textArea = document.createElement('textarea');
     textArea.value = textToCopy;
     document.body.appendChild(textArea);
@@ -25,27 +36,23 @@ export default function FloatingBtn() {
   };
 
   const copyCurrentPageURL = () => {
-    const currentPageURL = window.location.href;
-    copyToClipboard(currentPageURL);
-    alert('링크가 복사되었습니다: ' + currentPageURL);
+    copyToClipboard(url);
+    alert('링크가 복사되었습니다!');
   };
 
   // 카카오톡 공유하기
-  // Kakao.init('YOUR_APP_KEY'); // 여기에 앱 키를 입력하세요
+  // Kakao.init('969928'); // 여기에 앱 키를 입력하세요
 
-  const shareToKakao = () => {
-    // Kakao.Link.sendDefault({
-    //   objectType: 'feed',
-    //   content: {
-    //     title: '타이틀',
-    //     description: '설명',
-    //     imageUrl: '이미지 URL',
-    //     link: {
-    //       mobileWebUrl: '모바일 웹 URL',
-    //       webUrl: '웹 URL',
-    //     },
-    //   },
-    // });
+  const handleKakaoShare = () => {
+    console.log(1555);
+    Kakao.Share.sendDefault({
+      objectType: 'text',
+      text: '기본 템플릿으로 제공되는 텍스트 템플릿은 텍스트를 최대 200자까지 표시할 수 있습니다. 텍스트 템플릿은 텍스트 영역과 하나의 기본 버튼을 가집니다. 임의의 버튼을 설정할 수도 있습니다. 여러 장의 이미지, 프로필 정보 등 보다 확장된 형태의 카카오톡 공유는 다른 템플릿을 이용해 보낼 수 있습니다.',
+      link: {
+        mobileWebUrl: 'https://developers.kakao.com',
+        webUrl: 'https://developers.kakao.com',
+      },
+    });
   };
 
   return (
@@ -55,14 +62,14 @@ export default function FloatingBtn() {
           <div>
             <button className="linkBtn" type="button" onClick={copyCurrentPageURL}></button>
             <hr />
-            <button className="kakaoBtn" type="button" onClick={shareToKakao}></button>
+            <button className="kakaoBtn" type="button" onClick={handleKakaoShare}></button>
           </div>
         </div>
       ) : null}
 
       <button
         className="circle shareBtn"
-        onClick={handleButtonClick}
+        onClick={() => setIsOpen(!isOpen)}
         onMouseOver={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         type="button"
@@ -77,7 +84,7 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 15.625rem;
+  top: 42.938rem;
   gap: 1.313rem;
   align-self: flex-end;
 
