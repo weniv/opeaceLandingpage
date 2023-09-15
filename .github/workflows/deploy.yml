@@ -39,6 +39,13 @@ jobs:
         env:
           REACT_APP_KAKAO_KEY: ${{ secrets.REACT_APP_KAKAO_KEY }}
 
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+        env:
+          REACT_APP_KAKAO_KEY: ${{ secrets.REACT_APP_KAKAO_KEY }}
+          
       - name: Set PUBLIC_URL
         run: |
           PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed -r 's/^.+\/(.+)$/\/\1\//')
