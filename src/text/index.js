@@ -32,7 +32,11 @@ export const facilityList = [
   {
     id: 3,
     icon: 'activitesIcon.svg',
-    image: [{ id: 1, img: 'activites' }],
+    image: [
+      { id: 1, img: 'activity-1' },
+      { id: 2, img: 'activity-2' },
+      { id: 3, img: 'activity-3' },
+    ],
     description: `오피스아워(불멍), 바당요가, 사운드워킹 등\n
     오피스제주에서만 누릴 수 있는 액티비티가 준비되어 있습니다.          `,
   },
