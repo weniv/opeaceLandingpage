@@ -11,15 +11,6 @@ console.log('kakaoKey', !!kakaoKey);
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    // init 해주기 전에 clean up 을 해준다.
-    Kakao.cleanup();
-    // 자신의 js 키를 넣어준다.
-    Kakao.init(kakaoKey);
-    // 잘 적용되면 true 를 뱉는다.
-    console.log(Kakao.isInitialized());
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
