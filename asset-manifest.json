@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/opeaceXweniv-workation/static/css/main.9586202c.css",
-    "main.js": "/opeaceXweniv-workation/static/js/main.cfbc36ba.js",
+    "main.js": "/opeaceXweniv-workation/static/js/main.1dbffef2.js",
     "index.html": "/opeaceXweniv-workation/index.html",
     "main.9586202c.css.map": "/opeaceXweniv-workation/static/css/main.9586202c.css.map",
-    "main.cfbc36ba.js.map": "/opeaceXweniv-workation/static/js/main.cfbc36ba.js.map"
+    "main.1dbffef2.js.map": "/opeaceXweniv-workation/static/js/main.1dbffef2.js.map"
   },
   "entrypoints": [
     "static/css/main.9586202c.css",
-    "static/js/main.cfbc36ba.js"
+    "static/js/main.1dbffef2.js"
   ]
 }
