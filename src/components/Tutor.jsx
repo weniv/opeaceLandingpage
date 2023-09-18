@@ -15,7 +15,7 @@ export default function Tutor() {
               <div className="wrap">
                 <h3>{cls.title}</h3>
                 <div className="tutorInfo">
-                  <img src={process.env.PUBLIC_URL + '/img/test.png'} alt="강사 소개 이미지" />
+                  <img src={process.env.PUBLIC_URL + `/img/tutor-${cls.image}.png`} />
                   <div>
                     <p className="tutorName">
                       강사 <strong>{cls.name}</strong>
@@ -91,7 +91,6 @@ const Card = styled.div`
 
     img {
       width: 6.38em;
-      border-radius: 50%;
     }
 
     p.tutorName {

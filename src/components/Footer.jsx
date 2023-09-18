@@ -18,7 +18,9 @@ export default function Footer() {
       </Text>
       <Partnership isMobile={isMobile}>
         {partnershipList.map((el) => (
-          <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`} alt={`${el.logo} 로고 이미지`} />
+          <object type="image/svg+xml" data={process.env.PUBLIC_URL + `/img/${el.logo}.svg`}>
+            <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.logo}.svg`} alt={`${el.logo} 로고 이미지`} />
+          </object>
         ))}
       </Partnership>
     </Layout>
@@ -43,7 +45,7 @@ const Partnership = styled.div`
   gap: ${({ isMobile }) => (isMobile ? '1.87em' : '3.88em')};
   margin-top: 2.25em;
 
-  img {
+  object {
     width: ${({ isMobile }) => (isMobile ? '8em' : '12em')};
   }
 `;

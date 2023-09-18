@@ -37,9 +37,9 @@ jobs:
         run: npm ci
         if: steps.cache.outputs.cache-hit != 'true'
 
-      - name: .env setting
+      - name: Set environment variables
         run: |
-          echo "REACT_APP_KAKAO_KEY=${{ secrets.REACT_APP_KAKAO_KEY }}" >> .env
+          echo "REACT_APP_KAKAO_KEY=${{ secrets.REACT_APP_KAKAO_KEY }}" >> $GITHUB_ENV
 
       - name: Set PUBLIC_URL
         run: |

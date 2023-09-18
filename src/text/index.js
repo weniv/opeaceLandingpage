@@ -68,8 +68,12 @@ export const partnershipList = [
 ];
 
 export const planList = [
-  { id: 1, title: '모집기간', description: '2023.10.16(월) - 10.20(금) (변경가능)' },
-  { id: 2, title: '행사기간', description: '2023.10.9 ~ 10.12 (3박 4일간) (변경가능)' },
+  { id: 1, title: '모집기간', description: '2023.09.18(월) - 10.06(금)' },
+  {
+    id: 2,
+    title: '행사기간',
+    description: '1차 2023.10.13(금) ~ 10.16(월), 2차 2023.10.27(금) ~ 10.30(월)',
+  },
   { id: 3, title: '행사장소', description: '서귀포시 향교로 214 오피스제주 사계점 세미나실' },
   { id: 4, title: '비용', description: '무료' },
 ];
@@ -79,32 +83,46 @@ export const planList = [
 export const TutorList = [
   {
     id: 1,
-    title: '피그마로 협업하기',
-    name: '소울곰',
+    title: '모두가 알아야할 웹 접근성, 크롬 개발자 도구 / 기본 프로그래밍',
+    image: 'licat',
+    name: '이호준',
     career: [
-      { id: 1, current: 1, position: '주식회사 위니브 CDO' },
-      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
-      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+      { id: 1, current: 1, position: '주식회사 위니브 대표' },
+      { id: 2, current: 1, position: '바울랩(학원, 연구원, 출판사 3사) 대표' },
+      { id: 3, current: 1, position: '제주코딩베이스캠프 운영진' },
     ],
   },
   {
     id: 2,
-    title: '개발자를 위한 UI/UX 살펴보기',
+    title: '피그마로 협업하기',
+    image: 'soulgom',
     name: '소울곰',
     career: [
       { id: 1, current: 1, position: '주식회사 위니브 CDO' },
-      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
-      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+      { id: 2, current: 1, position: '멋쟁이사자처럼 FE스쿨 5기, 7기 피그마 특강 강사' },
+      { id: 3, current: 1, position: '재미만랩 Blender(블렌더)3D 왕초보 입문 강사' },
     ],
   },
   {
     id: 3,
-    title: 'Hello, Mr.my yesterday',
-    name: '소울곰',
+    title: `개발자가 디자이너에게[UXUI 살펴보기] / 노션 기본 활용방법`,
+    name: '전유진',
+    image: 'zeezee',
     career: [
-      { id: 1, current: 1, position: '주식회사 위니브 CDO' },
-      { id: 2, current: 1, position: '멋쟁이사자처럼 프론트엔드 스쿨 5기 강사' },
-      { id: 3, current: 0, position: '이스트소프트 백엔드 스쿨 오르미 1기 HTML/CSS 강사' },
+      { id: 1, current: 1, position: '주식회사 위니브 프론트엔드 개발자' },
+      { id: 2, current: 1, position: '재미만랩 우피x노션 노코드 웹사이트 만들기 강사' },
+      { id: 3, current: 0, position: '오현고등학교 기초 웹 개발 강의 강사' },
+    ],
+  },
+  {
+    id: 3,
+    title: '우피를 이용한 노코드 웹사이트 만들기',
+    name: '김민승',
+    image: 'rosy',
+    career: [
+      { id: 1, current: 1, position: '주식회사 위니브 프론트엔드 개발자 & 경영지원' },
+      { id: 2, current: 1, position: '인프런 우피x노션 노코드 웹사이트 만들기 강사' },
+      { id: 3, current: 1, position: '재미만랩 우피x노션 노코드 웹사이트 만들기 강사' },
     ],
   },
 ];
@@ -123,29 +141,29 @@ export const ScheduleList = [
   {
     id: 1,
     program: [
-      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
-      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 1, title: '노션 기본 활용방법' },
+      { id: 2, title: '숙소 체크인(오피스 제주 이용사항 오리엔테이션)' },
     ],
   },
   {
     id: 2,
     program: [
-      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
-      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 1, title: '화순곶자왈 사운드워킹' },
+      { id: 2, title: 'FE개발자가 디자이너에게 - UX/UI 살펴보기' },
     ],
   },
   {
     id: 3,
     program: [
-      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
-      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 1, title: '우피를 이용한 노코드 웹사이트 만들기' },
+      { id: 2, title: '모두가 알아야할 웹 접근성과 크롬 개발자 도구 or 모두가 알아야할 기본 프로그래밍' },
     ],
   },
   {
     id: 4,
     program: [
-      { id: 1, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
-      { id: 2, title: '디자이너와 기획자를 위한 코딩(프로그래밍)' },
+      { id: 1, title: '피그마로 협업하기' },
+      { id: 2, title: '교육 종료 및 체크아웃' },
     ],
   },
 ];

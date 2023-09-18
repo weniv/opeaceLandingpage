@@ -15,7 +15,9 @@ export default function MobileCompanyIntro() {
       </Intro>
       <Opeace>
         <Logo>
-          <img src={process.env.PUBLIC_URL + `/img/opeace.svg`} alt="opeace" />
+          <object type="image/svg+xml" data={process.env.PUBLIC_URL + `/img/opeace.svg`}>
+            <img src={process.env.PUBLIC_URL + `/img/opeace.svg`} alt="opeace" />
+          </object>
         </Logo>
         <Desc>
           <strong>

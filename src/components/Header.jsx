@@ -10,7 +10,9 @@ export default function Header() {
     <>
       {isMobile ? (
         <MobileWrap>
-          <img src={process.env.PUBLIC_URL + `/img/logo-mobile.svg`} alt="로고 이미지" />
+          <object type="image/svg+xml" data={process.env.PUBLIC_URL + `/img/logo-mobile.svg`}>
+            <img src={process.env.PUBLIC_URL + `/img/logo-mobile.svg`} alt="로고 이미지" />
+          </object>
           <a href={googleFormLink} target="_blank" rel="noreferrer">
             <img src={process.env.PUBLIC_URL + `/img/go-mobile.svg`} alt="신청하기" />
           </a>
