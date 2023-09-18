@@ -44,11 +44,16 @@ export default function FloatingBtn() {
 
   const handleKakaoShare = () => {
     Kakao.Share.sendDefault({
-      objectType: 'text',
-      text: '기본 템플릿으로 제공되는 텍스트 템플릿은 텍스트를 최대 200자까지 표시할 수 있습니다. 텍스트 템플릿은 텍스트 영역과 하나의 기본 버튼을 가집니다. 임의의 버튼을 설정할 수도 있습니다. 여러 장의 이미지, 프로필 정보 등 보다 확장된 형태의 카카오톡 공유는 다른 템플릿을 이용해 보낼 수 있습니다.',
-      link: {
-        mobileWebUrl: 'https://developers.kakao.com',
-        webUrl: 'https://developers.kakao.com',
+      objectType: 'feed',
+      content: {
+        title: 'O-PEACE X Weniv',
+        description: '오피스제주와 위니브가 함께 Workation + Education 뜻의 워케이션 프로그램을 제공합니다.',
+        imageUrl:
+          'https://user-images.githubusercontent.com/94890646/268152427-89a8e2e1-a329-4209-a06d-d836b035983e.png',
+        link: {
+          mobileWebUrl: 'https://weniv.github.io/opeaceXweniv-workation/',
+          webUrl: 'https://weniv.github.io/opeaceXweniv-workation/',
+        },
       },
     });
   };
