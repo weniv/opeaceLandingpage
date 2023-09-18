@@ -24,7 +24,7 @@ export default function AutoSlider({ list, isFull }) {
         {list &&
           list.map((el) => (
             <Wrap isMobile={isMobile} isFull={isFull}>
-              <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.img}.svg`} />
+              <img key={el.id} src={process.env.PUBLIC_URL + `/img/${el.img}.jpg`} />
             </Wrap>
           ))}
       </Slider>
@@ -41,6 +41,7 @@ const Wrap = styled.div`
     width: ${({ isMobile }) => isMobile && 'calc(100vw - 110px)'};
     min-width: 266px;
     min-height: ${({ isMobile }) => isMobile && '150px'};
+    max-height: 364px;
     width: ${({ isFull }) => isFull && '100%'};
     min-height: ${({ isFull }) => isFull && '200px'};
   }

@@ -5,7 +5,6 @@ import { facilityList, placeImgList } from '../text';
 import { CustomSlider, AutoSlider, VideoPlayer } from './atom';
 import { useResizeContext } from '../context/ResizeContext';
 
-
 export default function Facility() {
   const { isMobile } = useResizeContext();
 
@@ -17,7 +16,7 @@ export default function Facility() {
         {facilityList.map((el) => (
           <Grid isMobile={isMobile} key={el.id} id={el.id}>
             <div className="description">
-              <img src={process.env.PUBLIC_URL + `/img/${el.icon}`} alt="workspace 아이콘" />
+              <img src={process.env.PUBLIC_URL + `/img/${el.icon}`} />
               <p>{el.description}</p>
             </div>
             <AutoSlider list={el.image} className="test" />

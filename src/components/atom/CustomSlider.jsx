@@ -9,7 +9,7 @@ export default function CustomSlider({ list, name = 'place' }) {
     customPaging: function (i) {
       return (
         <a>
-          <img src={process.env.PUBLIC_URL + `/img/${name}${i + 1}.svg`} />
+          <img src={process.env.PUBLIC_URL + `/img/${name}${i + 1}.jpg`} />
         </a>
       );
     },
