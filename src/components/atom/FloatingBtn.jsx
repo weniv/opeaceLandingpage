@@ -117,13 +117,15 @@ const Wrap = styled.div`
     }
 
     button.linkBtn {
-      height: 1.688rem;
+      min-height: 1.688rem;
       background-image: url(${process.env.PUBLIC_URL + '/img/linkIcon.svg'});
+      background-size: 70%;
     }
 
     button.kakaoBtn {
-      height: 1.563rem;
+      min-height: 1.563rem;
       background-image: url(${process.env.PUBLIC_URL + '/img/kakaoIcon.svg'});
+      background-size: 90%;
     }
   }
 
