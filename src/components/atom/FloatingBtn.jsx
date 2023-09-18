@@ -40,7 +40,7 @@ export default function FloatingBtn() {
         title: 'O-PEACE X Weniv',
         description: '오피스제주와 위니브가 함께 Workation + Education 뜻의 워케이션 프로그램을 제공합니다.',
         imageUrl:
-          'https://user-images.githubusercontent.com/94890646/268152427-89a8e2e1-a329-4209-a06d-d836b035983e.png',
+          'https://user-images.githubusercontent.com/94890646/268587488-46351367-3956-4b26-88ee-03adf6c70703.png',
         link: {
           mobileWebUrl: 'https://weniv.github.io/opeaceXweniv-workation/',
           webUrl: 'https://weniv.github.io/opeaceXweniv-workation/',
