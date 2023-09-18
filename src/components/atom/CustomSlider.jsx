@@ -28,7 +28,7 @@ export default function CustomSlider({ list, name = 'place' }) {
       <Slider {...settings}>
         {list.map((place) => (
           <div className="item">
-            <img src={process.env.PUBLIC_URL + `/img/${place.img}.svg`} />
+            <img src={process.env.PUBLIC_URL + `/img/${place.img}.jpg`} />
           </div>
         ))}
       </Slider>
