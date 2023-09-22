@@ -132,7 +132,7 @@ const Archive = styled.div`
     width: 100%;
     height: 100%;
     opacity: 0.2;
-    background-image: url(${process.env.PUBLIC_URL + '/img/archive-bg.svg'});
+    background-image: url(${process.env.PUBLIC_URL + '/img/archive-bg.png'});
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
