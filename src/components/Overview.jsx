@@ -12,15 +12,10 @@ export default function Overview() {
       <Img src={process.env.PUBLIC_URL + '/img/workation.svg'} />
       {isMobile ? (
         <Description>
-          <strong>'어디서든 일하고 살아볼 수 있는 환경'</strong>을<br /> 만들겠다는 목표로 설립된 오피스와
-          <br />
-          <strong>
-            '기술의 교육 기회를 누구나 차등 없이 받을 수 있게
-            <br /> 대중화, 보편화, 시스템화하는 것'
-          </strong>
-          이란
-          <br />
-          비전을 가진 ICT 교육 콘텐츠 기업인 위니브가 함께
+          <strong>'어디서든 일하고 살아볼 수 있는 환경'</strong>을<br />
+          만들겠다는 목표로 설립된 오피스와<br />
+          <strong>'누구나 차등 없는 기술교육'</strong>의<br />
+          비전을 가진 ICT 교육 콘텐츠 기업 위니브가 함께
           <br />
           <br />
           <span>
@@ -34,9 +29,7 @@ export default function Overview() {
           <Description>
             '어디서든 일하고 살아볼 수 있는 환경'을 만들겠다는 목표로 설립된 오피스와
             <br />
-            '기술의 교육 기회를 누구나 차등 없이 받을 수 있게 대중화, 보편화, 시스템화하는 것'이란
-            <br />
-            비전을 가진 ICT 교육 콘텐츠 기업인 위니브가 함께
+            '누구나 차등 없는 기술교육'의 비전을 가진 ICT 교육 콘텐츠 기업 위니브가 함께
             <br />
             <span>
               개발자와 원활한 소통이 필요한 기획자/디자이너 10분을 대상으로
