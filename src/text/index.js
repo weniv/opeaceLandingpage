@@ -83,7 +83,7 @@ export const planList = [
 export const TutorList = [
   {
     id: 1,
-    title: '모두가 알아야할 웹 접근성, 크롬 개발자 도구 / 기본 프로그래밍',
+    title: '모두를 위한 기본 프로그래밍',
     image: 'licat',
     name: '이호준',
     career: [
@@ -156,7 +156,7 @@ export const ScheduleList = [
     id: 3,
     program: [
       { id: 1, title: '우피를 이용한 노코드 웹사이트 만들기' },
-      { id: 2, title: '모두가 알아야할 웹 접근성과 크롬 개발자 도구 or 모두가 알아야할 기본 프로그래밍' },
+      { id: 2, title: '모두가 알아야할 기본 프로그래밍' },
     ],
   },
   {
