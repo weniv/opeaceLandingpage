@@ -68,7 +68,7 @@ export const partnershipList = [
 ];
 
 export const planList = [
-  { id: 1, title: '모집기간', description: '2023.09.18(월) - 10.06(금)' },
+  { id: 1, title: '모집기간', description: '2023.09.18(월) - 10.10(화)' },
   {
     id: 2,
     title: '행사기간',
