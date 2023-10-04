@@ -5,8 +5,10 @@ import styled from 'styled-components';
 const url = 'https://weniv.github.io/opeaceXweniv-workation/';
 const kakaoKey = process.env.REACT_APP_KAKAO_KEY;
 const Kakao = window.Kakao;
+Kakao.init(kakaoKey);
 
-console.log('kakaoKey', !!kakaoKey);
+// console.log('kakaoKey', !!kakaoKey);
+console.log('Kakao', Kakao.Share);
 
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(false);
